@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.obar.simon_kristine_labexer2.SecondActivity"
+    tools:showIn="@layout/activity_second">
+
+
+    <TableLayout
+        android:id="@id/TableView"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:id="@+id/btn_loadSharedPreferences"
+            android:text="Load Shared Preferences"
+            android:onClick="LoadSharedPreferences"/>
+
+        <Button
+            android:id="@+id/btn_loadInternalStorage"
+            android:text="Load Internal Storage"
+            android:onClick="LoadInternalStorage"/>
+    </TableLayout>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/display"
+        android:layout_below="@id/TableView"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/display"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="Clear"
+            android:onClick="Clear"
+            android:textColor="@color/colorAccent"/>
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="back"
+            android:onClick="Back"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
