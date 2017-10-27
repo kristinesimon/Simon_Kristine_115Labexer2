@@ -2,29 +2,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.obar.simon_kristine_labexer2.SecondActivity"
-    tools:showIn="@layout/activity_second">
+    tools:showIn="@layout/activity_second"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
 
     <TableLayout
         android:id="@id/TableView"
-        android:layout_width="500dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="8dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/logiin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load"
+            android:textColor="#fff"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="50px"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            />
 
         <Button
             android:id="@+id/btn_loadSharedPreferences"
             android:text="Load Shared Preferences"
-            android:onClick="LoadSharedPreferences"/>
+            android:onClick="LoadSharedPreferences"
+            android:textColor="#fff"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btn_loadInternalStorage"
             android:text="Load Internal Storage"
-            android:onClick="LoadInternalStorage"/>
+            android:onClick="LoadInternalStorage"
+            android:textColor="#fff"
+            android:background="@drawable/border"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"/>
     </TableLayout>
 
     <TextView
@@ -35,7 +63,13 @@
         android:gravity="center_horizontal"
         android:textSize="20dp"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        android:paddingTop="15dp"
+        android:textColorHint="#fff"
+        android:layout_marginLeft="15dp"
+        android:background="#00000000"
+        android:letterSpacing="0.1"
+        android:textColor="#fff"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -51,7 +85,13 @@
             android:layout_alignParentLeft="true"
             android:text="Clear"
             android:onClick="Clear"
-            android:textColor="@color/colorAccent"/>
+            android:textColor="#fff"
+            android:background="@drawable/border"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"/>
         <Button
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
@@ -59,7 +99,13 @@
             android:layout_alignParentRight="true"
             android:text="back"
             android:onClick="Back"
-            android:textColor="@color/colorPrimary"/>
+            android:textColor="#fff"
+            android:background="@drawable/border"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"/>
 
 
     </RelativeLayout>
